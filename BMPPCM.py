@@ -6,6 +6,7 @@ import sys
 
 # Usage:
 #python BMPPCM.py  example/digital-alchemy-f.bmp  example/merge.wav example/final.bmp
+
 PCM_LE = True  # PCM 32-bit should be Little Endian or Big Endian?
 bmp_in = sys.argv[1]
 wav_in = sys.argv[2]
