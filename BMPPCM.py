@@ -2,11 +2,15 @@
 
 from struct import unpack, pack
 import wave
+import sys
 
+# Usage:
+#python BMPPCM.py  example/digital-alchemy-f.bmp  example/merge.wav example/final.bmp
 PCM_LE = True  # PCM 32-bit should be Little Endian or Big Endian?
-bmp_in ='transmutation-cycle/digital-alchemy-f.bmp'
-wav_in ='transmutation-cycle/merge.wav'
-bmp_out='da0.bmp'
+bmp_in = sys.argv[1]
+wav_in = sys.argv[2]
+bmp_out= sys.argv[3]
+
 # BMP created with Gimp as 16-bit R5G6B5
 f=open(bmp_in, 'rb').read()
 # WAV created with mpg123 -w a.wav a.mp3 (stereo)
